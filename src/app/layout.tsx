@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import SideBar from "@/components/SideBar";
-import RightPanel from "@/components/right-panel";
+import RightPanel from "@/components/RightPanel";
 import { SidebarProvider } from "@/components/ui/sidebar";
 
 // You can replace this with your actual font if different

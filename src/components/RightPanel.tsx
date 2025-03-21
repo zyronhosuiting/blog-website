@@ -121,7 +121,7 @@ export default function RightPanel() {
               <Progress
                 value={skill.level}
                 className="h-1 md:h-1.5 bg-primary/10"
-                indicatorClassName="bg-gradient-to-r from-primary to-secondary"
+                // indicatorClass="bg-gradient-to-r from-primary to-secondary"
               />
             </div>
           ))}
