@@ -54,7 +54,7 @@ export default function SideBar() {
   return (
     <>
       {/* Mobile menu button - only visible on small screens */}
-      <div className="flex justify-between items-center px-4 md:hidden">
+      <div className="flex justify-between items-center px-2 md:px-4 md:hidden">
         <Button
           variant="ghost"
           size="icon"
@@ -71,20 +71,20 @@ export default function SideBar() {
 
       <Sidebar
         className={cn(
-          "transition-all duration-300 ease-in-out",
+          "transition-all duration-300 ease-in-out h-full px-2 md:px-4",
           mobileMenuOpen ? "block" : "hidden md:block"
         )}
         collapsible="none"
       >
-        <SidebarHeader className="flex flex-col items-center justify-center p-6">
-          <div className="relative w-16 h-16 md:w-24 md:h-24 mb-4 rounded-full overflow-hidden border-2 border-primary/20 bg-gradient-to-br from-primary/10 to-secondary/10">
+        <SidebarHeader className="flex flex-col items-center justify-center p-4 md:p-6">
+          <div className="relative w-16 h-16 md:w-24 md:h-24 mb-4 rounded-full overflow-hidden border-2 border-primary/20 bg-linear-to-br from-primary/10 to-secondary/10">
             <div className="absolute inset-0 flex items-center justify-center text-xl md:text-2xl font-bold text-primary">
               YN
             </div>
             {/* Add your profile image here */}
             {/* <Image src="/profile.jpg" alt="Your Name" fill className="object-cover" /> */}
           </div>
-          <h1 className="text-lg md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+          <h1 className="text-lg md:text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
             Your Name
           </h1>
           <p className="text-xs md:text-sm text-muted-foreground mt-1">
@@ -92,11 +92,11 @@ export default function SideBar() {
           </p>
 
           <div className="w-full mt-4">
-            <div className="h-0.5 w-full bg-gradient-to-r from-primary/5 via-primary/20 to-primary/5"></div>
+            <div className="h-0.5 w-full bg-linear-to-r from-primary/5 via-primary/20 to-primary/5"></div>
           </div>
         </SidebarHeader>
 
-        <SidebarContent>
+        <SidebarContent className="flex-1 overflow-y-auto">
           <SidebarMenu>
             {navItems.map((item) => (
               <SidebarMenuItem key={item.name}>
@@ -129,9 +129,9 @@ export default function SideBar() {
           </SidebarMenu>
         </SidebarContent>
 
-        <SidebarFooter className="mt-auto">
+        <SidebarFooter className="mt-auto border-t border-border/40">
           <div className="w-full mb-4">
-            <div className="h-0.5 w-full bg-gradient-to-r from-primary/5 via-primary/20 to-primary/5"></div>
+            <div className="h-0.5 w-full bg-linear-to-r from-primary/5 via-primary/20 to-primary/5"></div>
           </div>
 
           <div className="flex justify-center space-x-4 p-4">

@@ -1,83 +1,282 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-*: initial;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-dark-orange: #fd8c00;
+  --color-golden-gate-bridge: #e95000;
+  --color-keppel: #2ea99d;
+  --color-success: #00fd87;
+  --color-error: #fd4800;
+  --color-jet: #393939;
+  --color-primary-link: #357dff;
+
+  --color-orange-50: #fff4e6;
+  --color-orange-100: #fedbb0;
+  --color-orange-200: #feca8a;
+  --color-orange-300: #feb254;
+  --color-orange-400: #fda333;
+  --color-orange-500: #fd8c00;
+  --color-orange-600: #e67f00;
+  --color-orange-700: #b46300;
+  --color-orange-800: #8b4d00;
+  --color-orange-900: #6a3b00;
+
+  --color-red-50: #fdeee6;
+  --color-red-100: #f8c9b0;
+  --color-red-200: #f5af8a;
+  --color-red-300: #f08a54;
+  --color-red-400: #ed7333;
+  --color-red-500: #e95000;
+  --color-red-600: #d44900;
+  --color-red-700: #a53900;
+  --color-red-800: #802c00;
+  --color-red-900: #622200;
+
+  --color-green-50: #eaf6f5;
+  --color-green-100: #bee4e1;
+  --color-green-200: #9fd7d2;
+  --color-green-300: #73c5bd;
+  --color-green-400: #58bab1;
+  --color-green-500: #2ea99d;
+  --color-green-600: #2a9a8f;
+  --color-green-700: #21786f;
+  --color-green-800: #195d56;
+  --color-green-900: #134742;
+
+  --color-gray-50: #ebebeb;
+  --color-gray-100: #c2c2c2;
+  --color-gray-200: #a4a4a4;
+  --color-gray-300: #7a7a7a;
+  --color-gray-400: #616161;
+  --color-gray-500: #393939;
+  --color-gray-600: #343434;
+  --color-gray-700: #282828;
+  --color-gray-800: #1f1f1f;
+  --color-gray-900: #181818;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --text-h0: 3rem;
+  --text-h0--line-height: 3.5rem;
+  --text-h0--letter-spacing: 0.05em;
+  --text-h0--font-weight: 700;
+  --text-h1: 2.5rem;
+  --text-h1--line-height: 3rem;
+  --text-h1--letter-spacing: 0.05em;
+  --text-h1--font-weight: 700;
+  --text-h2: 2rem;
+  --text-h2--line-height: 2.375rem;
+  --text-h2--letter-spacing: 0.05em;
+  --text-h2--font-weight: 700;
+  --text-h3: 1.75rem;
+  --text-h3--line-height: 2.125rem;
+  --text-h3--letter-spacing: 0.04em;
+  --text-h3--font-weight: 600;
+  --text-h4: 1.5rem;
+  --text-h4--line-height: 1.75rem;
+  --text-h4--letter-spacing: 0.03em;
+  --text-h4--font-weight: 600;
+  --text-h5: 1.25rem;
+  --text-h5--line-height: 1.5rem;
+  --text-h5--letter-spacing: 0.02em;
+  --text-h5--font-weight: 600;
+  --text-h6: 1.125rem;
+  --text-h6--line-height: 1.375rem;
+  --text-h6--letter-spacing: 0.02em;
+  --text-h6--font-weight: 600;
+  --text-title-l: 1rem;
+  --text-title-l--line-height: 1.5rem;
+  --text-title-l--letter-spacing: 0.01em;
+  --text-title-l--font-weight: 600;
+  --text-title-m: 0.875rem;
+  --text-title-m--line-height: 1.25rem;
+  --text-title-m--letter-spacing: 0.01em;
+  --text-title-m--font-weight: 600;
+  --text-title-s: 0.75rem;
+  --text-title-s--line-height: 1.125rem;
+  --text-title-s--letter-spacing: 0.01em;
+  --text-title-s--font-weight: 600;
+  --text-body-l: 1rem;
+  --text-body-l--line-height: 1.5rem;
+  --text-body-l--letter-spacing: 0.01em;
+  --text-body-l--font-weight: 400;
+  --text-body-m: 0.875rem;
+  --text-body-m--line-height: 1.25rem;
+  --text-body-m--letter-spacing: 0.01em;
+  --text-body-m--font-weight: 400;
+  --text-body-s: 0.75rem;
+  --text-body-s--line-height: 1.125rem;
+  --text-body-s--letter-spacing: 0.01em;
+  --text-body-s--font-weight: 400;
+  --text-btn-l: 1rem;
+  --text-btn-l--line-height: 1.5rem;
+  --text-btn-l--letter-spacing: 0.1em;
+  --text-btn-l--font-weight: 500;
+  --text-btn-s: 0.875rem;
+  --text-btn-s--line-height: 1.25rem;
+  --text-btn-s--letter-spacing: 0.1em;
+  --text-btn-s--font-weight: 500;
+  --text-label-l: 0.75rem;
+  --text-label-l--line-height: 1rem;
+  --text-label-l--letter-spacing: 0.02em;
+  --text-label-l--font-weight: 500;
+  --text-label-s: 0.625rem;
+  --text-label-s--line-height: 0.875rem;
+  --text-label-s--letter-spacing: 0.02em;
+  --text-label-s--font-weight: 500;
+  --text-caption-l: 0.75rem;
+  --text-caption-l--line-height: 1rem;
+  --text-caption-l--letter-spacing: 0.02em;
+  --text-caption-l--font-weight: 300;
+  --text-caption-s: 0.625rem;
+  --text-caption-s--line-height: 0.875rem;
+  --text-caption-s--letter-spacing: 0.02em;
+  --text-caption-s--font-weight: 300;
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --text-color: #fff;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 9%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 270 91% 65%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 240 5.9% 10%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
   }
 
   .dark {
-    --background: 0 0% 3.9%;
+    --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+
+    --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
+
+    --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 270 91% 65%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 240 5.9% 10%;
     --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }

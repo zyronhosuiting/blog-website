@@ -62,7 +62,7 @@ export default function RightPanel() {
   return (
     <div className="px-2 md:px-4 space-y-4 md:space-y-6">
       {/* Status Card */}
-      <Card className="border border-border/40 bg-card/30 backdrop-blur-sm">
+      <Card className="border border-border/40 bg-card/30 backdrop-blur-xs">
         <CardHeader className="pb-2 px-3 md:px-6">
           <CardTitle className="text-xs md:text-sm font-medium flex items-center">
             <div className="flex items-center">
@@ -104,7 +104,7 @@ export default function RightPanel() {
       </Card>
 
       {/* Skills */}
-      <Card className="border border-border/40 bg-card/30 backdrop-blur-sm">
+      <Card className="border border-border/40 bg-card/30 backdrop-blur-xs">
         <CardHeader className="pb-2 px-3 md:px-6">
           <CardTitle className="text-xs md:text-sm font-medium flex items-center">
             <Cpu className="h-3 md:h-4 w-3 md:w-4 mr-2 text-primary" />
@@ -121,7 +121,7 @@ export default function RightPanel() {
               <Progress
                 value={skill.level}
                 className="h-1 md:h-1.5 bg-primary/10"
-                // indicatorClass="bg-gradient-to-r from-primary to-secondary"
+                // indicatorClass="bg-linear-to-r from-primary to-secondary"
               />
             </div>
           ))}
@@ -129,7 +129,7 @@ export default function RightPanel() {
       </Card>
 
       {/* Latest Activity */}
-      <Card className="border border-border/40 bg-card/30 backdrop-blur-sm">
+      <Card className="border border-border/40 bg-card/30 backdrop-blur-xs">
         <CardHeader className="pb-2 px-3 md:px-6">
           <CardTitle className="text-xs md:text-sm font-medium flex items-center">
             <Terminal className="h-3 md:h-4 w-3 md:w-4 mr-2 text-primary" />
@@ -163,13 +163,13 @@ export default function RightPanel() {
       </Card>
 
       {/* Call to Action */}
-      <Card className="border border-primary/20 bg-primary/5 backdrop-blur-sm">
+      <Card className="border border-primary/20 bg-primary/5 backdrop-blur-xs">
         <CardContent className="p-3 md:p-4">
           <div className="text-center space-y-2 md:space-y-3">
             <h3 className="text-xs md:text-sm font-medium">
               Interested in working together?
             </h3>
-            <Button className="w-full text-xs md:text-sm py-1 md:py-2 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
+            <Button className="w-full text-xs md:text-sm py-1 md:py-2 bg-linear-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
               Get in Touch{" "}
               <ExternalLink className="ml-2 h-3 w-3 md:h-4 md:w-4" />
             </Button>

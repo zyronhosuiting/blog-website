@@ -30,9 +30,9 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
     <html lang={params.locale} className="dark scrollbar-hide">
       <body className={`${roboto.className} antialiased`}>
         <SidebarProvider defaultOpen={true}>
-          <div className="grid grid-cols-8 xl:grid-cols-12 gap-4">
+          <div className="grid grid-cols-8 xl:grid-cols-12 gap-4 h-screen">
             {/* Left Sidebar */}
-            <div className="col-span-2 xl:col-span-2 min-h-screen max-h-screen py-6 border-r border-gray-900 sticky top-0">
+            <div className="col-span-2 xl:col-span-2 py-6 h-screen overflow-hidden border-r border-gray-900 sticky top-0">
               <SideBar />
             </div>
 
