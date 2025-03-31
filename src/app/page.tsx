@@ -14,6 +14,7 @@ import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { AnimatedCard } from "@/components/ui/animated-card";
 import dynamic from "next/dynamic";
+import MatrixCode from "@/components/matrix-code";
 
 // Dynamically import components that use browser APIs with no SSR
 const DynamicParticleBackground = dynamic(
@@ -58,14 +59,19 @@ export default function Home() {
       <DynamicParticleBackground />
 
       {/* Hero Section */}
-      <section className="relative">
+      <section className="relative z-10 py-8 md:py-12">
         {/* Background grid pattern */}
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
         {/* Glowing orb effect */}
         <div className="absolute overflow-hidden w-full h-48 md:w-full md:h-96 bg-primary/20 rounded-full blur-3xl opacity-20"></div>
 
-        <div className="relative space-y-4 md:space-y-6">
+        {/* Matrix Code Background */}
+        <div className="absolute inset-0 -z-10">
+          <MatrixCode />
+        </div>
+
+        <div className="relative space-y-4 md:space-y-6 container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

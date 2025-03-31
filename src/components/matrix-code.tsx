@@ -5,15 +5,17 @@ interface MatrixCodeProps {
   color?: string;
   characters?: string;
   fadeOpacity?: number;
-  speed?: number; // New prop for controlling speed
+  speed?: number;
+  className?: string;
 }
 
 const MatrixCode: React.FC<MatrixCodeProps> = ({
-  fontSize = 20,
-  color = "primary",
+  fontSize = 14,
+  color = "#3b82f6",
   characters = "01",
-  fadeOpacity = 0.1,
-  speed = 1, // Default speed multiplier
+  fadeOpacity = 0.05,
+  speed = 1,
+  className = "",
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -25,8 +27,10 @@ const MatrixCode: React.FC<MatrixCodeProps> = ({
     if (!ctx) return;
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const rect = canvas.parentElement?.getBoundingClientRect();
+      if (!rect) return;
+      canvas.width = rect.width;
+      canvas.height = rect.height;
     };
 
     resizeCanvas();
@@ -54,11 +58,10 @@ const MatrixCode: React.FC<MatrixCodeProps> = ({
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
         }
-        drops[i] += speed; // Apply speed multiplier
+        drops[i] += speed;
       }
     };
 
-    // Adjust interval based on speed (faster speed = lower interval)
     const interval = setInterval(draw, 33 / speed);
 
     return () => {
@@ -70,14 +73,7 @@ const MatrixCode: React.FC<MatrixCodeProps> = ({
   return (
     <canvas
       ref={canvasRef}
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        zIndex: 0,
-      }}
+      className={`absolute inset-0 w-full h-full opacity-30 pointer-events-none ${className}`}
     />
   );
 };
