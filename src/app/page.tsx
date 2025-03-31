@@ -3,18 +3,13 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Code, ExternalLink, Github, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { AnimatedCard } from "@/components/ui/animated-card";
 import dynamic from "next/dynamic";
 import MatrixCode from "@/components/matrix-code";
+import { RevealCard } from "@/components/ui/reveal-card";
 
 // Dynamically import components that use browser APIs with no SSR
 const DynamicParticleBackground = dynamic(
@@ -176,22 +171,25 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {featuredProjects.map((project, index) => (
             <ScrollReveal key={project.title} width="100%" delay={index * 0.1}>
-              <AnimatedCard className="h-full">
-                <Card className="h-full border border-border/40 bg-card/30 backdrop-blur-sm hover:border-primary/20 transition-all duration-300">
-                  <CardHeader className="p-3 md:p-4">
-                    <CardTitle className="text-sm md:text-base flex items-center justify-between">
-                      <span>{project.title}</span>
-                      <div className="flex items-center text-xs text-muted-foreground">
-                        <Star className="h-3 w-3 mr-1 fill-yellow-500 text-yellow-500" />
-                        {project.stars}
-                      </div>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-3 md:p-4 pt-0 md:pt-0">
-                    <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">
+              <RevealCard color="#0f1729" radius={400}>
+                <div className="relative flex flex-1 flex-col justify-between gap-3">
+                  <div className="flex items-center justify-between">
+                    <div className="w-fit rounded-lg border-[0.75px] border-border bg-muted p-2">
+                      <Code className="h-4 w-4" />
+                    </div>
+                    <div className="flex items-center text-xs text-muted-foreground">
+                      <Star className="h-3 w-3 mr-1 fill-yellow-500 text-yellow-500" />
+                      {project.stars}
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="pt-0.5 text-xl leading-[1.375rem] font-semibold font-sans tracking-[-0.04em] md:text-2xl md:leading-[1.875rem] text-balance text-foreground">
+                      {project.title}
+                    </h3>
+                    <h2 className="font-sans text-sm leading-[1.125rem] md:text-base md:leading-[1.375rem] text-muted-foreground">
                       {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-1.5 md:gap-2">
+                    </h2>
+                    <div className="flex flex-wrap gap-1.5 md:gap-2 pt-2">
                       {project.tags.map((tag) => (
                         <Badge
                           key={tag}
@@ -202,8 +200,8 @@ export default function Home() {
                         </Badge>
                       ))}
                     </div>
-                  </CardContent>
-                  <CardFooter className="flex justify-between p-3 md:p-4 pt-0 md:pt-0">
+                  </div>
+                  <div className="flex justify-between pt-3">
                     <Button
                       variant="ghost"
                       size="sm"
@@ -233,9 +231,9 @@ export default function Home() {
                         Demo
                       </a>
                     </Button>
-                  </CardFooter>
-                </Card>
-              </AnimatedCard>
+                  </div>
+                </div>
+              </RevealCard>
             </ScrollReveal>
           ))}
         </div>
