@@ -88,8 +88,8 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-sm md:text-base lg:text-xl text-muted-foreground max-w-2xl">
-              I build modern, high-performance web applications with
-              cutting-edge technologies.
+              I build modern, high-performance applications with cutting-edge
+              technologies.
             </p>
           </motion.div>
 
@@ -120,7 +120,6 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="pt-4 md:pt-8"
           >
             <p className="text-xs md:text-sm text-muted-foreground mb-2 md:mb-3">
               Tech Stack
@@ -131,10 +130,17 @@ export default function Home() {
                 "Next.js",
                 "TypeScript",
                 "Node.js",
-                "Tailwind CSS",
-                "MongoDB",
+                "AI",
+                "Go",
+                "Python",
                 "PostgreSQL",
+                "MongoDB",
+                "Redis",
+                "Cloudflare",
                 "AWS",
+                "Docker",
+                "Kubernetes",
+                "CI/CD",
               ].map((tech) => (
                 <Badge
                   key={tech}
