@@ -60,9 +60,9 @@ export default function RightPanel() {
   });
 
   return (
-    <div className="px-2 md:px-4 space-y-4 md:space-y-6">
+    <div className="px-2 md:px-4 space-y-4 md:space-y-6 w-full">
       {/* Status Card */}
-      <Card className="border border-border/40 bg-card/30 backdrop-blur-xs">
+      <Card className="border border-border/40 bg-card/30 backdrop-blur-xs w-full">
         <CardHeader className="pb-2 px-3 md:px-6">
           <CardTitle className="text-xs md:text-sm font-medium flex items-center">
             <div className="flex items-center">
