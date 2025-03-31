@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import {
   Home,
@@ -27,6 +28,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
 } from "@/components/ui/sidebar";
+import Image from "next/image";
 
 const navItems = [
   { name: "Home", href: "/", icon: Home },
@@ -48,7 +50,8 @@ const socialLinks = [
 ];
 
 export default function SideBar() {
-  const [activePath, setActivePath] = useState("/");
+  const pathname = usePathname();
+  const [activePath, setActivePath] = useState(pathname);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -81,8 +84,12 @@ export default function SideBar() {
             <div className="absolute inset-0 flex items-center justify-center text-xl md:text-2xl font-bold text-primary">
               YN
             </div>
-            {/* Add your profile image here */}
-            {/* <Image src="/profile.jpg" alt="Your Name" fill className="object-cover" /> */}
+            <Image
+              src="/profile/icon.jpeg"
+              alt="Zyron"
+              fill
+              className="object-cover"
+            />
           </div>
           <h1 className="text-lg md:text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
             Zyron

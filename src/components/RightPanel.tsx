@@ -74,9 +74,10 @@ export default function RightPanel() {
             </div>
             <div className="ml-auto flex items-center text-xs text-muted-foreground">
               <Clock className="h-3 w-3 mr-1" />
-              {currentTime.toLocaleTimeString([], {
+              {currentTime.toLocaleTimeString("en-US", {
                 hour: "2-digit",
                 minute: "2-digit",
+                hour12: false,
               })}
             </div>
           </CardTitle>
