@@ -168,72 +168,75 @@ export default function Home() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 auto-rows-fr">
           {featuredProjects.map((project, index) => (
             <ScrollReveal key={project.title} width="100%" delay={index * 0.1}>
-              <RevealCard color="#0f1729" radius={400}>
-                <div className="relative flex flex-1 flex-col justify-between gap-3">
-                  <div className="flex items-center justify-between">
-                    <div className="w-fit rounded-lg border-[0.75px] border-border bg-muted p-2">
-                      <Code className="h-4 w-4" />
+              <div className="h-full">
+                <RevealCard color="#0f1729" radius={400} className="h-full">
+                  <div className="relative flex flex-1 flex-col justify-between gap-3 h-full">
+                    <div className="flex items-center justify-between">
+                      <div className="w-fit rounded-lg border-[0.75px] border-border bg-muted p-2">
+                        <Code className="h-4 w-4" />
+                      </div>
+                      <div className="flex items-center text-xs text-muted-foreground">
+                        <Star className="h-3 w-3 mr-1 fill-yellow-500 text-yellow-500" />
+                        {project.stars}
+                      </div>
                     </div>
-                    <div className="flex items-center text-xs text-muted-foreground">
-                      <Star className="h-3 w-3 mr-1 fill-yellow-500 text-yellow-500" />
-                      {project.stars}
+                    <div className="space-y-0 flex-grow flex flex-col h-full">
+                      <h3 className="pt-0.5 text-xl leading-[1.375rem] font-semibold font-sans tracking-[-0.04em] md:text-2xl md:leading-[1.875rem] text-balance text-foreground mb-2">
+                        {project.title}
+                      </h3>
+                      <h2 className="font-sans text-sm leading-[1.125rem] md:text-base md:leading-[1.375rem] text-muted-foreground flex-grow min-h-[4rem]">
+                        {project.description}
+                      </h2>
+                      <div className="flex flex-wrap gap-1.5 md:gap-2 pt-3 mt-auto">
+                        {project.tags.map((tag) => (
+                          <Badge
+                            key={tag}
+                            variant="outline"
+                            className="text-xs bg-primary/5 border-primary/20"
+                          >
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="pt-0.5 text-xl leading-[1.375rem] font-semibold font-sans tracking-[-0.04em] md:text-2xl md:leading-[1.875rem] text-balance text-foreground">
-                      {project.title}
-                    </h3>
-                    <h2 className="font-sans text-sm leading-[1.125rem] md:text-base md:leading-[1.375rem] text-muted-foreground">
-                      {project.description}
-                    </h2>
-                    <div className="flex flex-wrap gap-1.5 md:gap-2 pt-2">
-                      {project.tags.map((tag) => (
-                        <Badge
-                          key={tag}
-                          variant="outline"
-                          className="text-xs bg-primary/5 border-primary/20"
+                    <div className="flex justify-between pt-3 mt-auto">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="text-xs h-8"
+                        asChild
+                      >
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
-                          {tag}
-                        </Badge>
-                      ))}
+                          <Github className="mr-1.5 h-3 w-3 md:h-4 md:w-4" />{" "}
+                          Code
+                        </a>
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="text-xs h-8 text-primary"
+                        asChild
+                      >
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="mr-1.5 h-3 w-3 md:h-4 md:w-4" />{" "}
+                          Demo
+                        </a>
+                      </Button>
                     </div>
                   </div>
-                  <div className="flex justify-between pt-3">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-xs h-8"
-                      asChild
-                    >
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="mr-1.5 h-3 w-3 md:h-4 md:w-4" /> Code
-                      </a>
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-xs h-8 text-primary"
-                      asChild
-                    >
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="mr-1.5 h-3 w-3 md:h-4 md:w-4" />{" "}
-                        Demo
-                      </a>
-                    </Button>
-                  </div>
-                </div>
-              </RevealCard>
+                </RevealCard>
+              </div>
             </ScrollReveal>
           ))}
         </div>
