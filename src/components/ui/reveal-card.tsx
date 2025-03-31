@@ -37,7 +37,7 @@ export const RevealCard = ({
 
   return (
     <div className="min-h-[14rem] list-none">
-      <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
+      <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border">
         <GlowingEffect
           spread={40}
           glow={true}
