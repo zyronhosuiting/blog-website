@@ -24,16 +24,6 @@ const DynamicParticleBackground = dynamic(
   { ssr: false }
 );
 
-const DynamicHeroScene = dynamic(
-  () => import("@/components/3d/hero-scene").then((mod) => mod),
-  { ssr: false }
-);
-
-const DynamicTechCube = dynamic(
-  () => import("@/components/3d/tech-cube").then((mod) => mod),
-  { ssr: false }
-);
-
 const featuredProjects = [
   {
     title: "Project Alpha",
@@ -73,7 +63,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
         {/* Glowing orb effect */}
-        <div className="absolute -top-24 -right-24 w-48 h-48 md:w-96 md:h-96 bg-primary/20 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute overflow-hidden w-full h-48 md:w-full md:h-96 bg-primary/20 rounded-full blur-3xl opacity-20"></div>
 
         <div className="relative space-y-4 md:space-y-6">
           <motion.div
@@ -118,9 +108,6 @@ export default function Home() {
               Download Resume
             </Button>
           </motion.div>
-
-          {/* 3D Hero Scene */}
-          <DynamicHeroScene />
 
           {/* Tech stack */}
           <motion.div
@@ -275,9 +262,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="flex justify-center">
-                    <DynamicTechCube className="hidden md:block" />
-                  </div>
+                  <div className="flex justify-center"></div>
                 </CardContent>
               </Card>
             </AnimatedCard>
