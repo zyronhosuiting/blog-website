@@ -14,7 +14,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name | Developer Portfolio",
+  title: "Zyron | Portfolio",
   description: "Full-Stack Developer specializing in modern web applications",
 };
 

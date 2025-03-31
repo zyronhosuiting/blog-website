@@ -85,10 +85,10 @@ export default function SideBar() {
             {/* <Image src="/profile.jpg" alt="Your Name" fill className="object-cover" /> */}
           </div>
           <h1 className="text-lg md:text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
-            Your Name
+            Zyron
           </h1>
           <p className="text-xs md:text-sm text-muted-foreground mt-1">
-            Full-Stack Developer
+            Application Architect
           </p>
 
           <div className="w-full mt-4">
