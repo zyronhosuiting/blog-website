@@ -94,6 +94,12 @@ export default function SideBar() {
           <h1 className="text-lg md:text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
             Zyron
           </h1>
+          <div className="w-full relative">
+            <div className="absolute inset-x-5 top-0 bg-gradient-to-r from-transparent via-primary to-transparent h-[3px] blur-sm" />
+            <div className="absolute inset-x-5 top-0 bg-gradient-to-r from-transparent via-primary to-transparent h-[1px]" />
+            <div className="absolute inset-x-10 top-0 bg-gradient-to-r from-transparent via-secondary to-transparent h-[6px] blur-sm" />
+            <div className="absolute inset-x-10 top-0 bg-gradient-to-r from-transparent via-secondary to-transparent h-[1px]" />
+          </div>
           <p className="text-xs md:text-sm text-muted-foreground mt-1">
             Application Architect
           </p>
