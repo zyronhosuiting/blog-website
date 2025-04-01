@@ -84,7 +84,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-sm md:text-base lg:text-xl text-muted-foreground max-w-2xl">
-              I build
+              I build{" "}
               <FlipWords
                 words={["high-performance", "modern", "cutting-edge"]}
               />
