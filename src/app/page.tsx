@@ -6,11 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { AnimatedCard } from "@/components/ui/animated-card";
 import dynamic from "next/dynamic";
 import MatrixCode from "@/components/matrix-code";
 import { RevealCard } from "@/components/ui/reveal-card";
 import { FlipWords } from "@/components/ui/flip-words";
+import { Boxes } from "@/components/ui/background-boxes";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 // Dynamically import components that use browser APIs with no SSR
 const DynamicParticleBackground = dynamic(
@@ -83,13 +84,13 @@ export default function Home() {
                 Zyron
               </span>
             </h1>
-            <p className="text-sm md:text-base lg:text-xl text-muted-foreground max-w-2xl">
+            <div className="text-sm md:text-base lg:text-xl text-muted-foreground max-w-2xl">
               I build{" "}
               <FlipWords
                 words={["high-performance", "modern", "cutting-edge"]}
               />
               application with latest technologies!
-            </p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -256,33 +257,40 @@ export default function Home() {
 
         <div className="relative">
           <ScrollReveal width="100%">
-            <AnimatedCard depth={5}>
-              <Card className="border border-border/40 bg-card/30 backdrop-blur-sm">
-                <CardContent className="p-3 md:p-6 flex flex-col md:flex-row gap-4 md:gap-6">
-                  <div className="md:flex-1">
-                    <p className="text-xs md:text-sm text-muted-foreground">
-                      I&apos;m a passionate full-stack developer with expertise
-                      in building modern web applications. With over 5 years of
-                      experience in the industry, I&apos;ve worked on a variety
-                      of projects ranging from small business websites to
-                      large-scale enterprise applications.
-                    </p>
-                    <div className="mt-3 md:mt-4 flex">
-                      <Button
-                        variant="link"
-                        size="sm"
-                        className="text-xs md:text-sm text-primary p-0"
-                      >
-                        Read more about me{" "}
-                        <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
-                      </Button>
-                    </div>
+            <div className="group">
+              <Card className="bg-card/30 backdrop-blur-sm overflow-hidden rounded-[1.25rem] border-[0.75px] border-border">
+                <CardContent className="p-0 relative">
+                  {/* Background Boxes - Full height and width */}
+                  <div className="w-full h-[250px] md:h-[200px] relative overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <Boxes className="opacity-70" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                   </div>
 
-                  <div className="flex justify-center"></div>
+                  {/* Content overlay */}
+                  <div className="absolute inset-0 p-3 md:p-6 flex flex-col justify-center">
+                    <div className="relative z-10 max-w-2xl">
+                      <TextGenerateEffect
+                        words="I'm a passionate full-stack developer with
+                        expertise in building modern web applications. With over
+                        5 years of experience in the industry, I've worked
+                        on a variety of projects ranging from small business
+                        websites to large-scale enterprise applications."
+                      />
+                      <div className="mt-3 md:mt-4 flex">
+                        <Button
+                          variant="link"
+                          size="sm"
+                          className="text-xs md:text-sm text-primary p-0"
+                        >
+                          Read more about me{" "}
+                          <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
-            </AnimatedCard>
+            </div>
           </ScrollReveal>
 
           {/* Code snippet decoration */}
@@ -290,7 +298,7 @@ export default function Home() {
             <div className="bg-card/80 backdrop-blur-sm border border-border/40 rounded-md p-2 text-xs font-mono text-muted-foreground">
               <Code className="h-4 w-4 inline-block mr-2" />
               <span>
-                const developer = new SeniorDeveloper(&quot;Zyron&quot;);
+                const developer = new SeniorEngineer(&quot;Zyron&quot;);
               </span>
             </div>
           </div>
