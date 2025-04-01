@@ -88,7 +88,6 @@ export default function Home() {
               <FlipWords
                 words={["high-performance", "modern", "cutting-edge"]}
               />
-              <br />
               application with latest technologies!
             </p>
           </motion.div>
