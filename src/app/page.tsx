@@ -10,6 +10,7 @@ import { AnimatedCard } from "@/components/ui/animated-card";
 import dynamic from "next/dynamic";
 import MatrixCode from "@/components/matrix-code";
 import { RevealCard } from "@/components/ui/reveal-card";
+import { FlipWords } from "@/components/ui/flip-words";
 
 // Dynamically import components that use browser APIs with no SSR
 const DynamicParticleBackground = dynamic(
@@ -83,8 +84,12 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-sm md:text-base lg:text-xl text-muted-foreground max-w-2xl">
-              I build modern, high-performance applications with cutting-edge
-              technologies.
+              I build
+              <FlipWords
+                words={["high-performance", "modern", "cutting-edge"]}
+              />
+              <br />
+              application with latest technologies!
             </p>
           </motion.div>
 
