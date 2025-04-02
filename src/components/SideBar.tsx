@@ -163,7 +163,7 @@ export default function SideBar() {
           </div>
 
           <div className="px-4 py-2 text-xs text-center text-muted-foreground">
-            © {new Date().getFullYear()} Your Name
+            © {new Date().getFullYear()} Zyron Ho
           </div>
         </SidebarFooter>
       </Sidebar>
