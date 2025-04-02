@@ -270,8 +270,8 @@ export default function Home() {
                   <div className="absolute inset-0 p-3 md:p-6 flex flex-col justify-center">
                     <div className="relative z-10 max-w-2xl">
                       <TextGenerateEffect
-                        words="I'm a passionate full-stack developer with
-                        expertise in building modern web applications. With over
+                        words="I'm a passionate software engineer with
+                        expertise in building modern applications. With over
                         5 years of experience in the industry, I've worked
                         on a variety of projects ranging from small business
                         websites to large-scale enterprise applications."
