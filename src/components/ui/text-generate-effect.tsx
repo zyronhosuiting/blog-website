@@ -1,6 +1,6 @@
 "use client";
-import { useEffect } from "react";
-import { motion, stagger, useAnimate } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const TextGenerateEffect = ({
@@ -15,20 +15,25 @@ export const TextGenerateEffect = ({
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const wordsArray = words.split(" ");
+
   useEffect(() => {
-    animate(
-      "span",
-      {
-        opacity: 1,
-        filter: filter ? "blur(0px)" : "none",
-      },
-      {
-        duration: duration ? duration : 1,
-        delay: stagger(0.1),
-      }
-    );
-  }, [animate, duration, filter, scope]);
+    if (isInView) {
+      animate(
+        "span",
+        {
+          opacity: 1,
+          filter: filter ? "blur(0px)" : "none",
+        },
+        {
+          duration: duration ? duration : 1,
+          delay: stagger(0.1),
+        }
+      );
+    }
+  }, [animate, duration, filter, scope, isInView]);
 
   const renderWords = () => {
     return (
@@ -52,7 +57,7 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn(className)}>
+    <div ref={ref} className={cn(className)}>
       <span className="text-xs md:text-sm">{renderWords()}</span>
     </div>
   );
