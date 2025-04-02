@@ -117,7 +117,7 @@ export function ParticleBackground() {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, []);
+  }, [colors, isMounted]);
 
   // Don't render anything on the server
   if (!isMounted) return null;
