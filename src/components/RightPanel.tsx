@@ -20,28 +20,28 @@ import { Progress } from "@/components/ui/progress";
 
 const skills = [
   { name: "React", level: 90 },
-  { name: "TypeScript", level: 85 },
-  { name: "Node.js", level: 80 },
-  { name: "Next.js", level: 88 },
-  { name: "Tailwind CSS", level: 92 },
+  { name: "Next.js", level: 95 },
+  { name: "Node.js", level: 90 },
+  { name: "Python", level: 92 },
+  { name: "Go", level: 85 },
 ];
 
 const latestActivities = [
   {
-    title: "Deployed new project",
-    description: "Launched a new web application",
-    time: "2 days ago",
+    title: "Commit to a new project",
+    description: "Added new features to the project",
+    time: "1 hr ago",
     icon: Code,
   },
   {
     title: "Published article",
-    description: "How to build modern UIs with React",
-    time: "1 week ago",
+    description: "How to build auto workflow via n8n",
+    time: "2 day ago",
     icon: MessageSquare,
   },
   {
-    title: "Contributed to open source",
-    description: "Fixed a bug in a popular library",
+    title: "Deployed new project",
+    description: "Launched a new application",
     time: "2 weeks ago",
     icon: Github,
   },
