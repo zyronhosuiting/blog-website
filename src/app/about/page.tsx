@@ -71,58 +71,59 @@ const projects = [
 
 const education = [
   {
-    institution: "Stanford University",
-    degree: "Master of Science in Computer Science",
-    specialization: "Artificial Intelligence",
-    duration: "2020 - 2022",
-    location: "Stanford, CA",
-    achievements: [
-      "GPA: 3.9/4.0",
-      "Research Assistant in AI Lab",
-      "Published 2 papers on machine learning applications",
-    ],
+    institution: "University of Hong Kong",
+    degree: "Bachelor of Science in Computer Science",
+    specialization: "Artificial Intelligence & Blockchain",
+    duration: "2018 - 2022",
+    location: "Hong Kong",
+    achievements: ["GPA: 3.63/4.0", "First Class Honours", "Scholarship"],
   },
   {
-    institution: "University of California, Berkeley",
-    degree: "Bachelor of Science in Computer Science",
-    specialization: "Software Engineering",
-    duration: "2016 - 2020",
-    location: "Berkeley, CA",
-    achievements: [
-      "GPA: 3.8/4.0",
-      "Dean's List all semesters",
-      "Hackathon winner: Best Innovation Award",
-    ],
+    institution: "SKH TSK Secondary School ",
+    degree: "HKDSE",
+    specialization: "29",
+    duration: "2012 - 2018",
+    location: "Hong Kong",
+    achievements: ["Chief of House", "Prefect", "Scout Leader"],
   },
 ];
 
 const experience = [
   {
-    company: "Google",
-    position: "Senior Software Engineer",
-    duration: "2022 - Present",
-    location: "Mountain View, CA",
+    company: "Sovereign Well Limited",
+    position: "Application Architect",
+    duration: "2024 - 2025",
+    location: "England | Remote",
     description:
-      "Leading development of AI-powered features for Google Cloud Platform. Architecting scalable solutions that handle millions of requests per day.",
-    technologies: ["Golang", "Kubernetes", "TensorFlow", "GCP"],
+      "Led the design and implementation of a high-performance crypto exchange platform, ensuring seamless trading and robust system performance.",
+    technologies: ["React", "Rust", "AWS", "PostgreSQL"],
   },
   {
-    company: "Meta",
+    company: "BullB Tech Limited",
     position: "Software Engineer",
-    duration: "2020 - 2022",
-    location: "Menlo Park, CA",
+    duration: "2022 - 2024",
+    location: "Hong Kong",
     description:
-      "Developed and optimized backend services for Facebook Marketplace. Improved system performance by 40% through innovative caching strategies.",
-    technologies: ["React", "Node.js", "GraphQL", "AWS"],
+      "Developed and optimized scalable backend systems to handle high-transaction workloads, ensuring robust performance under heavy demand.",
+    technologies: ["Golang", "Nodejs", "Python", "React", "Kotlin"],
   },
   {
-    company: "Coinbase",
-    position: "Blockchain Developer",
-    duration: "2018 - 2020",
-    location: "San Francisco, CA",
+    company: "AI Talk Limited",
+    position: "Full Stack Developer",
+    duration: "2021 - 2022",
+    location: "Hong Kong",
     description:
-      "Built secure cryptocurrency trading systems and implemented smart contracts for various blockchain platforms.",
-    technologies: ["Solidity", "Ethereum", "Bitcoin", "Web3.js"],
+      "Internship at AI Talk IT Limited, where I was responsible for developing and maintaining the company's website and internal systems.",
+    technologies: ["JavaScript", "Python", "React", "L2D"],
+  },
+  {
+    company: "HK Caritas",
+    position: "Part-Time Developer",
+    duration: "2018 - 2021",
+    location: "Hong Kong",
+    description:
+      "Developed and maintained the company's website and internal systems.",
+    technologies: ["Java", "Python"],
   },
 ];
 
@@ -151,7 +152,7 @@ const timelineData = [
           </div>
         </div>
         <div className="flex flex-wrap gap-2 mb-4">
-          {["AWS", "Blockchain", "Python", "React"].map((tech) => (
+          {["AWS", "Blockchain", "Python", "tRPC"].map((tech) => (
             <Badge
               key={tech}
               variant="outline"
@@ -174,21 +175,24 @@ const timelineData = [
     ),
   },
   {
-    title: "2020 - 2022",
+    title: "2025 - 2024",
     content: (
       <div className="bg-card/30 backdrop-blur-sm border border-border/40 rounded-xl p-6">
         <div className="flex flex-col space-y-6">
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-2">
-              Software Engineer at Meta
+              Application Architect
             </h3>
             <p className="text-muted-foreground text-sm mb-4">
-              Developed and optimized backend services for Facebook Marketplace.
-              Improved system performance by 40% through innovative caching
-              strategies.
+              Overseeing the design and implementation of robust, scalable
+              software systems tailored to business needs. Collaborating with
+              cross-functional teams to define technical strategies, optimize
+              performance, and ensure seamless integration of cutting-edge
+              technologies like AI and blockchain in dynamic, high-traffic
+              environments.
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
-              {["React", "Node.js", "GraphQL", "AWS"].map((tech) => (
+              {["Rust", "AWS", "React", "PostgreSQL"].map((tech) => (
                 <Badge
                   key={tech}
                   variant="outline"
@@ -200,56 +204,60 @@ const timelineData = [
             </div>
           </div>
 
-          <div className="h-px w-full bg-border/40"></div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-foreground mb-2">
-              Master&apos;s Degree from Stanford
-            </h3>
-            <p className="text-muted-foreground text-sm mb-4">
-              Completed my Master of Science in Computer Science with a
-              specialization in Artificial Intelligence.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <Badge
-                variant="outline"
-                className="text-xs bg-secondary/10 text-secondary border-secondary/20"
-              >
-                GPA: 3.9/4.0
-              </Badge>
-              <Badge
-                variant="outline"
-                className="text-xs bg-secondary/10 text-secondary border-secondary/20"
-              >
-                Research Assistant
-              </Badge>
-              <Badge
-                variant="outline"
-                className="text-xs bg-secondary/10 text-secondary border-secondary/20"
-              >
-                2 Published Papers
-              </Badge>
-            </div>
+          <div className="grid grid-cols-2 gap-2 mb-4">
+            <Image
+              src="/project/mentoroo.png"
+              alt="mentoroo"
+              width={500}
+              height={500}
+              className="object-cover"
+            />
+            <Image
+              src="/project/nvxc.png"
+              alt="nvxc"
+              width={500}
+              height={500}
+              className="object-cover"
+            />
+            <Image
+              src="/project/gamex.png"
+              alt="gamex"
+              width={500}
+              height={500}
+              className="object-cover"
+            />
+            <Image
+              src="/project/letsdegen.png"
+              alt="letsdegen"
+              width={500}
+              height={500}
+              className="object-cover"
+            />
           </div>
         </div>
       </div>
     ),
   },
   {
-    title: "2018 - 2020",
+    title: "2024 - 2022",
     content: (
       <div className="bg-card/30 backdrop-blur-sm border border-border/40 rounded-xl p-6">
         <div className="flex flex-col space-y-6">
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-2">
-              Blockchain Developer at Coinbase
+              Software Engineer at BullB Tech Limited
             </h3>
             <p className="text-muted-foreground text-sm mb-4">
-              Built secure cryptocurrency trading systems and implemented smart
-              contracts for various blockchain platforms.
+              Built and optimized scalable backend systems to handle
+              high-transaction workloads, ensuring robust performance under
+              heavy demand. Leveraged parallel computing techniques to enhance
+              processing efficiency and implemented real-time data pipelines to
+              deliver seamless, low-latency experiences for users across
+              dynamic, large-scale applications.
             </p>
+
             <div className="flex flex-wrap gap-2 mb-4">
-              {["Solidity", "Ethereum", "Bitcoin", "Web3.js"].map((tech) => (
+              {["Golang", "Nodejs", "Python", "React", "Kotlin"].map((tech) => (
                 <Badge
                   key={tech}
                   variant="outline"
@@ -261,15 +269,63 @@ const timelineData = [
             </div>
           </div>
 
+          <div className="grid grid-cols-2 gap-2 mb-4">
+            <Image
+              src="/project/novax.png"
+              alt="novax"
+              width={500}
+              height={500}
+              className="object-cover"
+            />
+            <Image
+              src="/project/mobile.jpg"
+              alt="mobile"
+              width={500}
+              height={500}
+              className="object-cover"
+            />
+          </div>
+
           <div className="h-px w-full bg-border/40"></div>
 
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-2">
-              First Major Project: Poker Platform
+              Bachelor&apos;s Degree from University of Hong Kong
             </h3>
             <p className="text-muted-foreground text-sm mb-4">
-              Developed a real-time poker platform with multiplayer
-              functionality and secure payment processing.
+              Completed my Bachelor of Science in Computer Science.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <Badge
+                variant="outline"
+                className="text-xs bg-secondary/10 text-secondary border-secondary/20"
+              >
+                GPA: 3.63/4.0
+              </Badge>
+              <Badge
+                variant="outline"
+                className="text-xs bg-secondary/10 text-secondary border-secondary/20"
+              >
+                First Class Honours
+              </Badge>
+              <Badge
+                variant="outline"
+                className="text-xs bg-secondary/10 text-secondary border-secondary/20"
+              >
+                Minor in Information Systems
+              </Badge>
+            </div>
+          </div>
+
+          <div className="h-px w-full bg-border/40"></div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-foreground mb-2">
+              Final Year Project: Zero-Knowledge Proofs Application
+            </h3>
+            <p className="text-muted-foreground text-sm mb-4">
+              Developed a zero-knowledge proof application using zk-SNARKs and
+              node.js.
             </p>
             <div className="flex items-center gap-2">
               <Button
@@ -278,7 +334,11 @@ const timelineData = [
                 className="text-xs h-8 text-primary"
                 asChild
               >
-                <a href="./" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://wp.cs.hku.hk/2021/fyp21025/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <ExternalLink className="mr-1.5 h-3 w-3 md:h-4 md:w-4" /> View
                   Project
                 </a>
@@ -289,62 +349,119 @@ const timelineData = [
       </div>
     ),
   },
+
   {
-    title: "2016 - 2018",
+    title: "2022 - 2018",
     content: (
       <div className="bg-card/30 backdrop-blur-sm border border-border/40 rounded-xl p-6">
         <div className="flex flex-col space-y-6">
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-2">
-              Bachelor&apos;s Degree from UC Berkeley
+              Journey at University of Hong Kong
             </h3>
             <p className="text-muted-foreground text-sm mb-4">
               Completed my Bachelor of Science in Computer Science with a focus
-              on Software Engineering.
+              on AI & Blockchain technologies. This is where my passion for
+              cutting-edge technology began.
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               <Badge
                 variant="outline"
                 className="text-xs bg-secondary/10 text-secondary border-secondary/20"
               >
-                GPA: 3.8/4.0
+                Scholarship
               </Badge>
-              <Badge
-                variant="outline"
-                className="text-xs bg-secondary/10 text-secondary border-secondary/20"
-              >
-                Dean&apos;s List
-              </Badge>
-              <Badge
-                variant="outline"
-                className="text-xs bg-secondary/10 text-secondary border-secondary/20"
-              >
-                Hackathon Winner
-              </Badge>
+            </div>
+
+            {/* Key Courses Section */}
+            <h4 className="text-sm font-medium text-foreground mt-4 mb-2">
+              Key Courses
+            </h4>
+            <div className="grid grid-cols-2 gap-2 mb-4">
+              {[
+                "Artificial Intelligence",
+                "Advanced Algorithms",
+                "Blockchain Technology",
+                "Machine Learning",
+                "Fintech Applications",
+                "Business Management",
+                "Data Structures",
+                "Gaming",
+              ].map((course) => (
+                <div key={course} className="flex items-center gap-1.5">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                  <span className="text-xs text-muted-foreground">
+                    {course}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
 
           <div className="h-px w-full bg-border/40"></div>
 
+          {/* Programming Journey Section */}
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-2">
-              First Steps in Development
+              Programming Journey & Discovering Passions
             </h3>
             <p className="text-muted-foreground text-sm mb-4">
-              Started my journey in software development, learning the
-              fundamentals of programming and building my first web
-              applications.
+              Started with basic programming courses but quickly became
+              fascinated with AI and blockchain technologies. Joined CS clubs
+              and special projects that allowed me to explore these fields in
+              depth.
             </p>
-            <div className="flex flex-wrap gap-2">
-              {["JavaScript", "Python", "HTML/CSS", "React"].map((tech) => (
-                <Badge
-                  key={tech}
-                  variant="outline"
-                  className="text-xs bg-primary/5 border-primary/20"
-                >
-                  {tech}
-                </Badge>
-              ))}
+
+            {/* 2×2 Image Grid */}
+            <div className="grid grid-cols-2 gap-2 mb-4">
+              <Image
+                src="/project/hku.png"
+                alt="hku"
+                width={500}
+                height={500}
+                className="object-cover"
+              />
+              <Image
+                src="/project/machine-vision.png"
+                alt="machine-vision"
+                width={500}
+                height={500}
+                className="object-cover"
+              />
+            </div>
+
+            <h4 className="text-sm font-medium text-foreground mt-4 mb-2">
+              Key Projects
+            </h4>
+            <div className="space-y-2">
+              <div className="flex flex-col">
+                <span className="text-xs font-medium">AI-Object Detection</span>
+                <span className="text-xs text-muted-foreground">
+                  AI project for object detection using YOLOv5
+                </span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xs font-medium">
+                  Unity Game Development
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  Developed a Unity game using C#
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-2 mt-4">
+              {["JavaScript", "Python", "TensorFlow", "Unity", "C#", "C++"].map(
+                (tech) => (
+                  <Badge
+                    key={tech}
+                    variant="outline"
+                    className="text-xs bg-primary/5 border-primary/20"
+                  >
+                    {tech}
+                  </Badge>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -728,10 +845,11 @@ export default function AboutPage() {
                   {[
                     "React",
                     "Next.js",
-                    "TypeScript",
+                    "Shadcn UI",
                     "Tailwind CSS",
                     "React Native",
-                    "Vue.js",
+                    "Tanstack Query",
+                    "Zustand",
                   ].map((skill) => (
                     <li
                       key={skill}
@@ -758,7 +876,7 @@ export default function AboutPage() {
                     "Go",
                     "Java",
                     "PostgreSQL",
-                    "MongoDB",
+                    "Kafka",
                     "Redis",
                   ].map((skill) => (
                     <li
@@ -782,12 +900,12 @@ export default function AboutPage() {
                 <ul className="space-y-2">
                   {[
                     "AWS",
-                    "GCP",
+                    "Cloudflare",
                     "Docker",
-                    "Kubernetes",
+                    "AI tools",
                     "CI/CD",
                     "Blockchain",
-                    "TensorFlow",
+                    "Solidity",
                   ].map((skill) => (
                     <li
                       key={skill}
