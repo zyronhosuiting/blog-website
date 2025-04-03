@@ -65,7 +65,7 @@ const featuredProjects = [
 
 export default function Home() {
   return (
-    <div className="space-y-8 md:space-y-12">
+    <div className="space-y-8 md:space-y-12 pb-12">
       {/* Particle Background */}
       <DynamicParticleBackground />
 

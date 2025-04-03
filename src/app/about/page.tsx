@@ -17,6 +17,7 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RevealCard } from "@/components/ui/reveal-card";
 import { Timeline } from "@/components/ui/timeline";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 // Dynamically import components that use browser APIs with no SSR
 const DynamicParticleBackground = dynamic(
@@ -351,19 +352,19 @@ const timelineData = [
 
 export default function AboutPage() {
   return (
-    <div className="space-y-12 md:space-y-16">
+    <div className="space-y-12 md:space-y-16 pb-12">
       {/* Particle Background */}
       <DynamicParticleBackground />
 
       {/* Hero Section */}
-      <section className="relative">
+      <section className="relative z-10 py-6">
         {/* Background grid pattern */}
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
         {/* Glowing orb effect */}
         <div className="absolute -top-24 -right-24 w-48 h-48 md:w-96 md:h-96 bg-primary/20 rounded-full blur-3xl opacity-20"></div>
 
-        <div className="relative space-y-4 md:space-y-6">
+        <div className="relative space-y-4 md:space-y-6 container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -420,37 +421,43 @@ export default function AboutPage() {
             <div className="flex flex-col md:flex-row gap-8">
               <div className="md:w-1/3">
                 <div className="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 border border-border/40 relative">
-                  <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-sm">
-                    Profile Image
-                  </div>
-                  {/* You can add your profile image here */}
-                  {/* <Image src="/profile.jpg" alt="Your Name" fill className="object-cover" /> */}
+                  <Image
+                    src="/profile/icon.jpeg"
+                    alt="Zyron"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
               <div className="md:w-2/3 space-y-4">
                 <p className="text-muted-foreground">
-                  I&apos;m a full-stack developer with over 5 years of
-                  experience building modern web and mobile applications. My
-                  journey in tech began during my undergraduate studies at UC
-                  Berkeley, where I discovered my passion for creating
-                  innovative solutions to complex problems.
+                  I&apos;m a full-stack software engineer with over five years
+                  of experience crafting modern, high-performing applications.
+                  My passion for technology ignited during my undergraduate
+                  studies at the University of Hong Kong, where I found joy in
+                  solving complex challenges through innovative solutions.
                 </p>
                 <p className="text-muted-foreground">
-                  After completing my Master&apos;s at Stanford with a focus on
-                  AI, I&apos;ve worked with leading tech companies including
-                  Google and Meta, where I&apos;ve had the opportunity to build
-                  scalable systems that serve millions of users daily.
+                  My final year project, centered on AI and blockchain, marked
+                  the start of my professional journey. After graduating, I
+                  chose to dive straight into a small startup rather than being
+                  a small cog in a large company. This decision allowed me to
+                  develop a well-rounded skill set early on, and I later worked
+                  with leading firms like Tiny Trade, NovaX, and BullB Tech
+                  Limited, building scalable systems that serve hundreds of
+                  thousands of daily users.
                 </p>
                 <p className="text-muted-foreground">
-                  My expertise spans across frontend and backend development,
-                  with a particular interest in blockchain technology and
-                  artificial intelligence. I&apos;m passionate about creating
-                  intuitive user experiences backed by robust, efficient code.
+                  My expertise spans frontend and backend development, with a
+                  deep interest in blockchain technology and artificial
+                  intelligence. I thrive on designing seamless user experiences
+                  supported by clean, efficient, and robust code.
                 </p>
                 <p className="text-muted-foreground">
-                  When I&apos;m not coding, you can find me exploring new hiking
-                  trails, experimenting with new programming languages, or
-                  contributing to open-source projects.
+                  When I&apos;m not immersed in code, I&apos;m exploring
+                  emerging technologies, experimenting with new programming
+                  languages, or collaborating with peers to share insights and
+                  knowledge.
                 </p>
 
                 <div className="pt-4 flex flex-wrap gap-3">
@@ -465,7 +472,7 @@ export default function AboutPage() {
                   <div className="w-px h-12 bg-border/40"></div>
                   <div className="flex flex-col">
                     <span className="text-2xl font-bold text-foreground">
-                      20+
+                      10+
                     </span>
                     <span className="text-xs text-muted-foreground">
                       Projects Completed
