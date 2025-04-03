@@ -87,8 +87,8 @@ export default function RightPanel({ className }: { className?: string }) {
               </div>
             </CardTitle>
           </CardHeader>
-          <CardContent className="px-3 md:px-6">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-0">
+          <CardContent className="px-3 py-2 md:pb-6 md:px-6">
+            <div className="flex flex-row md:items-center justify-between gap-2 md:gap-0">
               <Badge
                 variant="outline"
                 className="bg-primary/10 text-primary border-primary/20 text-xs w-fit"
