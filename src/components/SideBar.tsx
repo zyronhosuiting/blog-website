@@ -226,13 +226,28 @@ export default function SideBar() {
         >
           <div className="flex flex-col h-full">
             <div className="flex flex-col items-center justify-center p-6">
-              <div className="relative w-16 h-16 mb-4 rounded-full overflow-hidden border-2 border-primary/20 bg-gradient-to-br from-primary/10 to-secondary/10">
-                <div className="absolute inset-0 flex items-center justify-center text-xl font-bold text-primary">
-                  YN
+              <div className="relative w-16 h-16 mb-4 rounded-full overflow-hidden border-2 border-primary/20 bg-linear-to-br from-primary/10 to-secondary/10">
+                <div className="absolute inset-0 flex items-center justify-center text-xl md:text-2xl font-bold text-primary">
+                  Zyron Ho
                 </div>
+                <Image
+                  src="/profile/icon.jpeg"
+                  alt="Zyron"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <p className="text-xs text-muted-foreground mt-1">
-                Full-Stack Developer
+              <h1 className="text-lg md:text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
+                Zyron
+              </h1>
+              <div className="w-full relative">
+                <div className="absolute inset-x-5 top-0 bg-gradient-to-r from-transparent via-primary to-transparent h-[3px] blur-sm" />
+                <div className="absolute inset-x-5 top-0 bg-gradient-to-r from-transparent via-primary to-transparent h-[1px]" />
+                <div className="absolute inset-x-10 top-0 bg-gradient-to-r from-transparent via-secondary to-transparent h-[6px] blur-sm" />
+                <div className="absolute inset-x-10 top-0 bg-gradient-to-r from-transparent via-secondary to-transparent h-[1px]" />
+              </div>
+              <p className="text-xs md:text-sm text-muted-foreground mt-1">
+                Application Architect
               </p>
             </div>
 
