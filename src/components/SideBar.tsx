@@ -174,18 +174,17 @@ export default function SideBar() {
         {/* Mobile Header */}
         <div className="fixed top-0 left-0 right-0 z-30 flex justify-between items-center px-4 py-3 bg-background/80 backdrop-blur-md border-b border-gray-900">
           <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-            HO SUI TING
+            Your Name
           </div>
           <div className="flex items-center gap-2">
             {/* Stats Button */}
             <Button
               variant="outline"
               size="sm"
-              className="text-xs relative group overflow-hidden"
+              className="text-xs"
               onClick={() => setStatsOpen(true)}
             >
-              <span className="relative z-10">Stats</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              Stats
             </Button>
 
             {/* Menu Button */}
@@ -302,10 +301,7 @@ export default function SideBar() {
 
         {/* Mobile Stats Panel */}
         <Sheet open={statsOpen} onOpenChange={setStatsOpen}>
-          <SheetContent
-            side="right"
-            className="w-[85%] sm:w-[350px] p-0 border-l border-gray-900/50 bg-background/95 backdrop-blur-md"
-          >
+          <SheetContent side="right" className="w-[85%] sm:w-[350px] p-0">
             <SheetHeader className="sr-only">
               <SheetTitle>Stats Panel</SheetTitle>
             </SheetHeader>
@@ -318,7 +314,6 @@ export default function SideBar() {
                 stiffness: 300,
                 duration: 0.3,
               }}
-              className="h-full overflow-hidden"
             >
               <RightPanel className="h-full overflow-y-auto py-6" />
             </motion.div>

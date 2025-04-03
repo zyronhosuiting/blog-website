@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code, ExternalLink, Github, Star } from "lucide-react";
+import { ArrowRight, Code, ExternalLink, Star, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -24,28 +24,42 @@ const DynamicParticleBackground = dynamic(
 
 const featuredProjects = [
   {
-    title: "Project Alpha",
-    description: "A modern web application built with Next.js and TypeScript",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    github: "https://github.com/yourusername/project-alpha",
-    demo: "https://project-alpha.vercel.app",
+    title: "Cryptopie",
+    description:
+      "A crypto media platform delivering real-time news and insights",
+    tags: ["React", "Tailwind CSS"],
+    github: "https://github.com/yourusername/cryptopie",
+    demo: "https://www.cryptopie.ai/",
     stars: 42,
+    status: "Completed",
+    date: "June 2023",
+    views: 1240,
+    featured: true,
   },
   {
-    title: "Project Beta",
-    description: "An AI-powered dashboard for data visualization",
-    tags: ["React", "Node.js", "D3.js", "AI"],
-    github: "https://github.com/yourusername/project-beta",
-    demo: "https://project-beta.vercel.app",
+    title: "NovaX",
+    description:
+      "A high-performance crypto exchange built for seamless trading",
+    tags: ["React Native", "Rust", "Java"],
+    github: "https://github.com/yourusername/novax",
+    demo: "https://www.novax.io/",
     stars: 78,
+    status: "In Progress",
+    date: "October 2023",
+    views: 3560,
+    featured: true,
   },
   {
-    title: "Project Gamma",
-    description: "A mobile-first e-commerce platform with real-time updates",
-    tags: ["React Native", "Firebase", "Redux"],
-    github: "https://github.com/yourusername/project-gamma",
-    demo: "https://project-gamma.vercel.app",
+    title: "Poker",
+    description: "A poker platform with real-time gameplay",
+    tags: ["NodeJs", "Redis", "Go", "PostgreSQL"],
+    github: "https://github.com/yourusername/poker88",
+    demo: "https://poker88.vercel.app",
     stars: 56,
+    status: "Completed",
+    date: "January 2024",
+    views: 2180,
+    featured: false,
   },
 ];
 
@@ -235,7 +249,7 @@ export default function Home() {
                           rel="noopener noreferrer"
                         >
                           <ExternalLink className="mr-1.5 h-3 w-3 md:h-4 md:w-4" />{" "}
-                          Demo
+                          View
                         </a>
                       </Button>
                     </div>
