@@ -261,7 +261,7 @@ export default function Home() {
               <Card className="bg-card/30 backdrop-blur-sm overflow-hidden rounded-[1.25rem] border-[0.75px] border-border">
                 <CardContent className="p-0 relative">
                   {/* Background Boxes - Full height and width */}
-                  <div className="w-full h-[250px] md:h-[200px] relative overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-full h-[150px] md:h-[200px] relative overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <Boxes className="opacity-70" />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                   </div>

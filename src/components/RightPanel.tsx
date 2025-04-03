@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { cn } from "@/lib/utils";
 
 const skills = [
   { name: "React", level: 90 },
@@ -47,7 +48,7 @@ const latestActivities = [
   },
 ];
 
-export default function RightPanel() {
+export default function RightPanel({ className }: { className?: string }) {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   // Update time every minute
@@ -60,7 +61,9 @@ export default function RightPanel() {
   });
 
   return (
-    <div className="px-2 md:px-4 space-y-4 md:space-y-6 w-full">
+    <div
+      className={cn("px-2 md:px-4 space-y-4 md:space-y-6 w-full", className)}
+    >
       {/* Status Card */}
       <Card className="border border-border/40 bg-card/30 backdrop-blur-xs w-full">
         <CardHeader className="pb-2 px-3 md:px-6">
@@ -122,7 +125,6 @@ export default function RightPanel() {
               <Progress
                 value={skill.level}
                 className="h-1 md:h-1.5 bg-primary/10"
-                // indicatorClass="bg-linear-to-r from-primary to-secondary"
               />
             </div>
           ))}

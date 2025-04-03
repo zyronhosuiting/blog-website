@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useMemo } from "react";
 import { motion } from "framer-motion";
 
 interface Particle {
@@ -18,7 +18,10 @@ export function ParticleBackground() {
   const animationRef = useRef<number>(0);
   const [isMounted, setIsMounted] = useState(false);
 
-  const colors = ["#3b82f6", "#8b5cf6", "#10b981", "#f59e0b"];
+  const colors = useMemo(
+    () => ["#3b82f6", "#8b5cf6", "#10b981", "#f59e0b"],
+    []
+  );
 
   useEffect(() => {
     // Set mounted state to true

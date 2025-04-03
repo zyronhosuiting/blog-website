@@ -30,19 +30,19 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
     <html lang={params.locale} className="dark scrollbar-hide">
       <body className={`${roboto.className} antialiased`}>
         <SidebarProvider defaultOpen={true}>
-          <div className="w-full grid grid-cols-8 xl:grid-cols-12 gap-4 h-screen">
-            {/* Left Sidebar */}
-            <div className="col-span-2 xl:col-span-2 py-6 h-screen overflow-hidden border-r border-gray-900 sticky top-0">
+          <div className="grid grid-cols-8 md:grid-cols-12 gap-4 min-h-screen">
+            {/* Left Sidebar - Visible on all screens, responsive layout */}
+            <div className="col-span-8 md:col-span-2 md:py-6 md:h-screen md:overflow-y-auto md:sticky md:top-0 md:border-r md:border-gray-900 scrollbar-hide">
               <SideBar />
             </div>
 
             {/* Main Content */}
-            <div className="col-span-6 xl:col-span-7 px-4 overflow-y-auto scrollbar-hide py-6">
+            <main className="col-span-8 md:col-span-7 px-4 md:py-6 overflow-y-auto scrollbar-hide">
               {children}
-            </div>
+            </main>
 
-            {/* Right Panel */}
-            <div className="col-span-3 xl:col-span-3 min-h-screen max-h-screen overflow-y-auto scrollbar-hide py-6 border-l border-gray-900 sticky top-0">
+            {/* Right Panel - Hidden on mobile and medium screens, visible on large screens */}
+            <div className="hidden md:block md:col-span-3 py-6 h-screen overflow-y-auto border-l border-gray-900 sticky top-0 scrollbar-hide">
               <RightPanel />
             </div>
           </div>

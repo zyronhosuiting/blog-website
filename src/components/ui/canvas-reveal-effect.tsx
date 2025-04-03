@@ -70,7 +70,7 @@ export const CanvasRevealEffect: React.FC<CanvasRevealEffectProps> = ({
         />
       </div>
       {showGradient && (
-        <div className="absolute inset-0 bg-gradient-to-t from-black to-[84%]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-[84%]" />
       )}
     </div>
   );
@@ -283,6 +283,7 @@ const ShaderMaterial: React.FC<ShaderMaterialProps> = ({
     });
 
     return materialObject;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [size.width, size.height, source]);
 
   return (
