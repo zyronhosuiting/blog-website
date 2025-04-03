@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code, ExternalLink, Star, Github } from "lucide-react";
+import { ArrowRight, Code, ExternalLink, Star, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -28,38 +28,38 @@ const featuredProjects = [
     description:
       "A crypto media platform delivering real-time news and insights",
     tags: ["React", "Tailwind CSS"],
-    github: "https://github.com/yourusername/cryptopie",
     demo: "https://www.cryptopie.ai/",
     stars: 42,
-    status: "Completed",
-    date: "June 2023",
-    views: 1240,
-    featured: true,
+    status: "In Progress",
+    date: "April 2025",
   },
   {
     title: "NovaX",
     description:
       "A high-performance crypto exchange built for seamless trading",
     tags: ["React Native", "Rust", "Java"],
-    github: "https://github.com/yourusername/novax",
     demo: "https://www.novax.io/",
     stars: 78,
-    status: "In Progress",
-    date: "October 2023",
-    views: 3560,
-    featured: true,
+    status: "Completed",
+    date: "October 2024",
   },
   {
     title: "Poker",
     description: "A poker platform with real-time gameplay",
     tags: ["NodeJs", "Redis", "Go", "PostgreSQL"],
-    github: "https://github.com/yourusername/poker88",
-    demo: "https://poker88.vercel.app",
+    demo: "./",
     stars: 56,
     status: "Completed",
     date: "January 2024",
-    views: 2180,
-    featured: false,
+  },
+  {
+    title: "Talk+ | AI & Crypto",
+    description: "A chat application with AI & crypto integration",
+    tags: ["React Native", "Python", "Express", "MySQL"],
+    demo: "https://www.talkapp.org/",
+    stars: 56,
+    status: "Completed",
+    date: "October 2023",
   },
 ];
 
@@ -222,21 +222,11 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="flex justify-between pt-3 mt-auto">
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="text-xs h-8"
-                        asChild
-                      >
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="mr-1.5 h-3 w-3 md:h-4 md:w-4" />{" "}
-                          Code
-                        </a>
-                      </Button>
+                      <div className="flex items-center text-xs text-muted-foreground">
+                        <Calendar className="h-3 w-3 mr-1" />
+                        {project.date}
+                      </div>
+
                       <Button
                         variant="ghost"
                         size="sm"
