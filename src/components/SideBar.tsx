@@ -290,7 +290,18 @@ export default function SideBar() {
             <SheetHeader className="sr-only">
               <SheetTitle>Stats Panel</SheetTitle>
             </SheetHeader>
-            <RightPanel className="h-full overflow-y-auto py-6" />
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                type: "spring",
+                damping: 25,
+                stiffness: 300,
+                duration: 0.3,
+              }}
+            >
+              <RightPanel className="h-full overflow-y-auto py-6" />
+            </motion.div>
           </SheetContent>
         </Sheet>
 
