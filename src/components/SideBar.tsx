@@ -174,7 +174,7 @@ export default function SideBar() {
         {/* Mobile Header */}
         <div className="fixed top-0 left-0 right-0 z-30 flex justify-between items-center px-4 py-3 bg-background/80 backdrop-blur-md border-b border-gray-900">
           <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-            Your Name
+            Ho Sui Ting
           </div>
           <div className="flex items-center gap-2">
             {/* Stats Button */}
@@ -293,7 +293,7 @@ export default function SideBar() {
                 ))}
               </div>
               <div className="text-xs text-center text-muted-foreground">
-                © {new Date().getFullYear()} Your Name
+                © {new Date().getFullYear()} Zyron Ho
               </div>
             </div>
           </div>

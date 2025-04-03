@@ -128,29 +128,30 @@ const experience = [
 
 const timelineData = [
   {
-    title: "2022 - Present",
+    title: "Present - 2025",
     content: (
       <div className="bg-card/30 backdrop-blur-sm border border-border/40 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-foreground mb-2">
-          Senior Software Engineer at Google
+          Co-Founder at Cryptopie
         </h3>
         <p className="text-muted-foreground text-sm mb-4">
-          Leading development of AI-powered features for Google Cloud Platform.
-          Architecting scalable solutions that handle millions of requests per
-          day.
+          Spearheading the development of AI-driven solutions to revolutionize
+          cryptocurrency trading and analytics. Designing scalable systems that
+          process millions of transactions daily, empowering users with
+          real-time insights in the fast-evolving crypto market.
         </p>
         <div className="grid grid-cols-2 gap-4 mb-6">
           <div className="flex flex-col space-y-1">
             <span className="text-xs text-muted-foreground">Location</span>
-            <span className="text-sm">Mountain View, CA</span>
+            <span className="text-sm">Singapore</span>
           </div>
           <div className="flex flex-col space-y-1">
             <span className="text-xs text-muted-foreground">Team</span>
-            <span className="text-sm">Google Cloud AI</span>
+            <span className="text-sm">AI & Blockchain Innovation</span>
           </div>
         </div>
         <div className="flex flex-wrap gap-2 mb-4">
-          {["Golang", "Kubernetes", "TensorFlow", "GCP"].map((tech) => (
+          {["AWS", "Blockchain", "Python", "React"].map((tech) => (
             <Badge
               key={tech}
               variant="outline"
@@ -160,12 +161,14 @@ const timelineData = [
             </Badge>
           ))}
         </div>
+
         <div className="relative w-full h-40 rounded-md overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-xs text-muted-foreground">
-              Project Showcase
-            </span>
-          </div>
+          <Image
+            src="/project/cryptopie.png"
+            alt="Cryptopie"
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
     ),

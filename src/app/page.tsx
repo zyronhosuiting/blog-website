@@ -27,7 +27,7 @@ const featuredProjects = [
     title: "Cryptopie",
     description:
       "A crypto media platform delivering real-time news and insights",
-    tags: ["React", "Tailwind CSS"],
+    tags: ["React", "Tailwind CSS", "Python"],
     demo: "https://www.cryptopie.ai/",
     stars: 42,
     status: "In Progress",
@@ -55,7 +55,7 @@ const featuredProjects = [
   {
     title: "Talk+ | AI & Crypto",
     description: "A chat application with AI & crypto integration",
-    tags: ["React Native", "Python", "Express", "MySQL"],
+    tags: ["React Native", "Python", "Express", "Socket"],
     demo: "https://www.talkapp.org/",
     stars: 56,
     status: "Completed",
