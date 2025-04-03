@@ -181,10 +181,11 @@ export default function SideBar() {
             <Button
               variant="outline"
               size="sm"
-              className="text-xs"
+              className="text-xs relative group overflow-hidden"
               onClick={() => setStatsOpen(true)}
             >
-              Stats
+              <span className="relative z-10">Stats</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </Button>
 
             {/* Menu Button */}
@@ -301,7 +302,10 @@ export default function SideBar() {
 
         {/* Mobile Stats Panel */}
         <Sheet open={statsOpen} onOpenChange={setStatsOpen}>
-          <SheetContent side="right" className="w-[85%] sm:w-[350px] p-0">
+          <SheetContent
+            side="right"
+            className="w-[85%] sm:w-[350px] p-0 border-l border-gray-900/50 bg-background/95 backdrop-blur-md"
+          >
             <SheetHeader className="sr-only">
               <SheetTitle>Stats Panel</SheetTitle>
             </SheetHeader>
@@ -314,6 +318,7 @@ export default function SideBar() {
                 stiffness: 300,
                 duration: 0.3,
               }}
+              className="h-full overflow-hidden"
             >
               <RightPanel className="h-full overflow-y-auto py-6" />
             </motion.div>

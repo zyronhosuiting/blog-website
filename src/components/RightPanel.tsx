@@ -67,7 +67,7 @@ export default function RightPanel({ className }: { className?: string }) {
     >
       {/* Status Card */}
       <ScrollReveal width="100%">
-        <Card className="border border-border/40 bg-card/30 backdrop-blur-xs w-full mt-4 md:mt-0">
+        <Card className="border border-border/40 bg-card/30 backdrop-blur-xs w-full mt-4 md:mt-0 hover:bg-card/40 transition-colors shadow-sm hover:shadow-md">
           <CardHeader className="pb-2 px-3 md:px-6">
             <CardTitle className="text-xs md:text-sm font-medium flex items-center">
               <div className="flex items-center">
@@ -112,7 +112,7 @@ export default function RightPanel({ className }: { className?: string }) {
 
       {/* Skills */}
       <ScrollReveal width="100%">
-        <Card className="border border-border/40 bg-card/30 backdrop-blur-xs">
+        <Card className="border border-border/40 bg-card/30 backdrop-blur-xs hover:bg-card/40 transition-colors shadow-sm hover:shadow-md">
           <CardHeader className="pb-2 px-3 md:px-6">
             <CardTitle className="text-xs md:text-sm font-medium flex items-center">
               <Cpu className="h-3 md:h-4 w-3 md:w-4 mr-2 text-primary" />
@@ -138,7 +138,7 @@ export default function RightPanel({ className }: { className?: string }) {
 
       {/* Latest Activity */}
       <ScrollReveal width="100%">
-        <Card className="border border-border/40 bg-card/30 backdrop-blur-xs">
+        <Card className="border border-border/40 bg-card/30 backdrop-blur-xs hover:bg-card/40 transition-colors shadow-sm hover:shadow-md">
           <CardHeader className="pb-2 px-3 md:px-6">
             <CardTitle className="text-xs md:text-sm font-medium flex items-center">
               <Terminal className="h-3 md:h-4 w-3 md:w-4 mr-2 text-primary" />
@@ -154,7 +154,7 @@ export default function RightPanel({ className }: { className?: string }) {
                 transition={{ delay: index * 0.1 }}
                 className="flex items-start space-x-2 md:space-x-3"
               >
-                <div className="mt-0.5 bg-primary/10 p-1 md:p-1.5 rounded-md text-primary">
+                <div className="mt-0.5 bg-primary/10 p-1 md:p-1.5 rounded-md text-primary hover:bg-primary/20 transition-colors">
                   <activity.icon className="h-3 w-3 md:h-4 md:w-4" />
                 </div>
                 <div className="space-y-0.5 md:space-y-1">
@@ -176,15 +176,15 @@ export default function RightPanel({ className }: { className?: string }) {
 
       {/* Call to Action */}
       <ScrollReveal width="100%">
-        <Card className="border border-primary/20 bg-primary/5 backdrop-blur-xs">
+        <Card className="border border-primary/20 bg-primary/5 backdrop-blur-xs hover:bg-primary/10 transition-colors shadow-sm hover:shadow-md">
           <CardContent className="p-3 md:p-4">
             <div className="text-center space-y-2 md:space-y-3">
               <h3 className="text-xs md:text-sm font-medium">
                 Interested in working together?
               </h3>
-              <Button className="w-full text-xs md:text-sm py-1 md:py-2 bg-linear-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
+              <Button className="w-full text-xs md:text-sm py-1 md:py-2 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 hover:shadow-lg">
                 Get in Touch{" "}
-                <ExternalLink className="ml-2 h-3 w-3 md:h-4 md:w-4" />
+                <ExternalLink className="ml-2 h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-0.5 transition-transform" />
               </Button>
             </div>
           </CardContent>
