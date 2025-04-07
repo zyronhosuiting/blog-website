@@ -32,7 +32,7 @@ const DynamicParticleBackground = dynamic(
 );
 
 // Sample blog post data
-const blogPosts = [
+const articlesPosts = [
   {
     id: "1",
     title: "Building Responsive Web Applications with Next.js and Tailwind",
@@ -122,18 +122,18 @@ const blogPosts = [
 // Get all unique categories
 const allCategories = [
   "All",
-  ...new Set(blogPosts.map((post) => post.category)),
+  ...new Set(articlesPosts.map((post) => post.category)),
 ];
 
-export default function BlogPage() {
+export default function ArticlePage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
   const [bookmarkedPosts, setBookmarkedPosts] = useState<string[]>(
-    blogPosts.filter((post) => post.bookmarked).map((post) => post.id)
+    articlesPosts.filter((post) => post.bookmarked).map((post) => post.id)
   );
 
   // Filter posts based on search query and active category
-  const filteredPosts = blogPosts.filter((post) => {
+  const filteredPosts = articlesPosts.filter((post) => {
     const matchesSearch =
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -148,7 +148,7 @@ export default function BlogPage() {
   });
 
   // Featured posts
-  const featuredPosts = blogPosts.filter((post) => post.featured);
+  const featuredPosts = articlesPosts.filter((post) => post.featured);
 
   // Toggle bookmark status
   const toggleBookmark = (postId: string) => {
@@ -180,7 +180,7 @@ export default function BlogPage() {
             className="space-y-2"
           >
             <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-none text-xs md:text-sm">
-              Blog
+              Articles
             </Badge>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
               Insights &{" "}
@@ -241,7 +241,7 @@ export default function BlogPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {featuredPosts.map((post, index) => (
             <ScrollReveal key={post.id} width="100%" delay={index * 0.1}>
-              <Link href={`/blog/${post.id}`} className="block h-full">
+              <Link href={`/article/${post.id}`} className="block h-full">
                 <div className="group relative h-full overflow-hidden rounded-xl border border-border/40 bg-card/30 backdrop-blur-sm transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5">
                   <div className="aspect-[16/9] w-full overflow-hidden">
                     <div className="h-full w-full bg-gradient-to-br from-primary/10 to-secondary/10 object-cover transition-transform duration-500 group-hover:scale-105">
@@ -354,7 +354,7 @@ export default function BlogPage() {
           </Tabs>
         </ScrollReveal>
 
-        {/* Blog Posts Grid */}
+        {/* Article Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {filteredPosts.map((post, index) => (
             <ScrollReveal key={post.id} width="100%" delay={index * 0.05}>
@@ -373,7 +373,7 @@ export default function BlogPage() {
                     </div>
                   </div>
                   <div className="space-y-2 flex-grow">
-                    <Link href={`/blog/${post.id}`} className="block group">
+                    <Link href={`/article/${post.id}`} className="block group">
                       <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
                         {post.title}
                       </h3>

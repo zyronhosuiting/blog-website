@@ -7,8 +7,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   Home,
   User,
-  Briefcase,
-  Code,
+  // Briefcase,
+  // Code,
   FileText,
   Mail,
   Github,
@@ -35,9 +35,9 @@ import RightPanel from "./RightPanel";
 const navItems = [
   { name: "Home", href: "/", icon: Home },
   { name: "About", href: "/about", icon: User },
-  { name: "Projects", href: "/projects", icon: Code },
-  { name: "Experience", href: "/experience", icon: Briefcase },
-  { name: "Blog", href: "/blog", icon: FileText },
+  // { name: "Projects", href: "/projects", icon: Code },
+  // { name: "Experience", href: "/experience", icon: Briefcase },
+  { name: "Article", href: "/article", icon: FileText },
   { name: "Contact", href: "/contact", icon: Mail },
 ];
 

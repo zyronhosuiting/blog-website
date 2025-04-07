@@ -176,14 +176,14 @@ export default function Home() {
             <h2 className="text-xl md:text-2xl font-bold tracking-tight">
               Featured Projects
             </h2>
-            <Button
+            {/* <Button
               variant="ghost"
               size="sm"
               className="text-xs md:text-sm text-primary"
             >
               View All{" "}
               <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
-            </Button>
+            </Button> */}
           </div>
         </ScrollReveal>
 

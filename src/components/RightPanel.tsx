@@ -63,10 +63,7 @@ export default function RightPanel({ className }: { className?: string }) {
 
   return (
     <div
-      className={cn(
-        "px-2 md:px-4 space-y-4 md:space-y-6 w-full overflow-scroll",
-        className
-      )}
+      className={cn("px-2 md:px-4 space-y-4 md:space-y-6 w-full", className)}
     >
       {/* Status Card */}
       <ScrollReveal width="100%">
