@@ -62,8 +62,8 @@ const socialLinks = [
   {
     name: "Telegram",
     icon: Send,
-    url: "https://t.me/zyron1oT_SNS",
-    username: "zyron1oT_SNS",
+    url: "https://t.me/zyron1oT_SMS",
+    username: "zyron1oT_SMS",
     color: "group-hover:text-white group-hover:bg-[#0088cc]",
   },
 ];
