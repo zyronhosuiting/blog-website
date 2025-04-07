@@ -114,13 +114,12 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap gap-2 md:gap-3"
           >
-            <Link href="/coming-soon">
+            <Link href="/about">
               <Button
                 size="sm"
                 className="text-xs md:text-sm bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
               >
-                View Projects{" "}
-                <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
+                About Me
               </Button>
             </Link>
             <Link href="/coming-soon">
@@ -129,7 +128,8 @@ export default function Home() {
                 variant="outline"
                 className="text-xs md:text-sm border-primary/20 bg-primary/5 hover:bg-primary/10"
               >
-                Download Resume
+                View Projects{" "}
+                <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
               </Button>
             </Link>
           </motion.div>
