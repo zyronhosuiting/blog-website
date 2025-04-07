@@ -128,7 +128,7 @@ const blogPosts = [
     views: 1240,
     bookmarked: true,
     author: {
-      name: "Your Name",
+      name: "Zyron Ho",
       role: "Full-Stack Developer",
       avatar: "/placeholder.svg?height=100&width=100",
     },
@@ -237,7 +237,7 @@ const blogPosts = [
     views: 2180,
     bookmarked: false,
     author: {
-      name: "Your Name",
+      name: "Zyron Ho",
       role: "Full-Stack Developer",
       avatar: "/placeholder.svg?height=100&width=100",
     },
@@ -403,7 +403,7 @@ const blogPosts = [
     views: 980,
     bookmarked: true,
     author: {
-      name: "Your Name",
+      name: "Zyron Ho",
       role: "Full-Stack Developer",
       avatar: "/placeholder.svg?height=100&width=100",
     },

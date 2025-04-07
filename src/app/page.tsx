@@ -12,6 +12,7 @@ import { RevealCard } from "@/components/ui/reveal-card";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Boxes } from "@/components/ui/background-boxes";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import Link from "next/link";
 
 // Dynamically import components that use browser APIs with no SSR
 const DynamicParticleBackground = dynamic(
@@ -113,20 +114,24 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap gap-2 md:gap-3"
           >
-            <Button
-              size="sm"
-              className="text-xs md:text-sm bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
-            >
-              View Projects{" "}
-              <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              className="text-xs md:text-sm border-primary/20 bg-primary/5 hover:bg-primary/10"
-            >
-              Download Resume
-            </Button>
+            <Link href="/coming-soon">
+              <Button
+                size="sm"
+                className="text-xs md:text-sm bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
+              >
+                View Projects{" "}
+                <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
+              </Button>
+            </Link>
+            <Link href="/coming-soon">
+              <Button
+                size="sm"
+                variant="outline"
+                className="text-xs md:text-sm border-primary/20 bg-primary/5 hover:bg-primary/10"
+              >
+                Download Resume
+              </Button>
+            </Link>
           </motion.div>
 
           {/* Tech stack */}
@@ -281,14 +286,16 @@ export default function Home() {
                         websites to large-scale enterprise applications."
                       />
                       <div className="mt-3 md:mt-4 flex">
-                        <Button
-                          variant="link"
-                          size="sm"
-                          className="text-xs md:text-sm text-primary p-0"
-                        >
-                          Read more about me{" "}
-                          <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
-                        </Button>
+                        <Link href="/about">
+                          <Button
+                            variant="link"
+                            size="sm"
+                            className="text-xs md:text-sm text-primary p-0"
+                          >
+                            Read more about me{" "}
+                            <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
+                          </Button>
+                        </Link>
                       </div>
                     </div>
                   </div>

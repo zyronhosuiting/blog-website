@@ -933,7 +933,12 @@ export default function AboutPage() {
               I&apos;m always open to discussing new projects, creative ideas or
               opportunities to be part of your vision.
             </p>
-            <Button className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
+            <Button
+              className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
+              onClick={() => {
+                window.location.href = "/contact";
+              }}
+            >
               Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>

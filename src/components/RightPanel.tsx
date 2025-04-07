@@ -19,6 +19,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import { ScrollReveal } from "./ui/scroll-reveal";
+import Link from "next/link";
 
 const skills = [
   { name: "React", level: 90 },
@@ -182,10 +183,12 @@ export default function RightPanel({ className }: { className?: string }) {
               <h3 className="text-xs md:text-sm font-medium">
                 Interested in working together?
               </h3>
-              <Button className="w-full text-xs md:text-sm py-1 md:py-2 bg-linear-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
-                Get in Touch{" "}
-                <ExternalLink className="ml-2 h-3 w-3 md:h-4 md:w-4" />
-              </Button>
+              <Link href="/contact">
+                <Button className="w-full cursor-pointer text-xs md:text-sm py-1 md:py-2 bg-linear-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
+                  Get in Touch{" "}
+                  <ExternalLink className="ml-2 h-3 w-3 md:h-4 md:w-4" />
+                </Button>
+              </Link>
             </div>
           </CardContent>
         </Card>

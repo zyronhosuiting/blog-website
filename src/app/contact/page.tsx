@@ -2,30 +2,30 @@
 
 import type React from "react";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
   Send,
   Github,
   Linkedin,
-  Twitter,
-  Mail,
-  MessageSquare,
-  MapPin,
-  Phone,
-  Copy,
-  Check,
-  ExternalLink,
-  Loader2,
+  //   Mail,
+  //   MessageSquare,
+  //   MapPin,
+  //   Phone,
+  //   Copy,
+  //   Check,
+  //   ExternalLink,
+  //   Loader2,
 } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RevealCard } from "@/components/ui/reveal-card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+// import { Input } from "@/components/ui/input";
+// import { Textarea } from "@/components/ui/textarea";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 // Dynamically import components that use browser APIs with no SSR
 const DynamicParticleBackground = dynamic(
@@ -54,7 +54,7 @@ const socialLinks = [
   },
   {
     name: "Twitter",
-    icon: Twitter,
+    icon: FaXTwitter,
     url: "https://x.com/zyron1oT",
     username: "zyron1oT",
     color: "group-hover:text-white group-hover:bg-[#1DA1F2]",
@@ -69,79 +69,79 @@ const socialLinks = [
 ];
 
 // Contact information
-const contactInfo = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "hello@yourname.com",
-    action: "Copy",
-    actionIcon: Copy,
-    actionSuccessIcon: Check,
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+1 (555) 123-4567",
-    action: "Copy",
-    actionIcon: Copy,
-    actionSuccessIcon: Check,
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "San Francisco, CA",
-    action: "View",
-    actionIcon: ExternalLink,
-    url: "https://maps.google.com",
-  },
-];
+// const contactInfo = [
+//   {
+//     icon: Mail,
+//     label: "Email",
+//     value: "hello@yourname.com",
+//     action: "Copy",
+//     actionIcon: Copy,
+//     actionSuccessIcon: Check,
+//   },
+//   {
+//     icon: Phone,
+//     label: "Phone",
+//     value: "+1 (555) 123-4567",
+//     action: "Copy",
+//     actionIcon: Copy,
+//     actionSuccessIcon: Check,
+//   },
+//   {
+//     icon: MapPin,
+//     label: "Location",
+//     value: "San Francisco, CA",
+//     action: "View",
+//     actionIcon: ExternalLink,
+//     url: "https://maps.google.com",
+//   },
+// ];
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [copiedField, setCopiedField] = useState<string | null>(null);
+  //   const [formData, setFormData] = useState({
+  //     name: "",
+  //     email: "",
+  //     subject: "",
+  //     message: "",
+  //   });
+  //   const [isSubmitting, setIsSubmitting] = useState(false);
+  //   const [copiedField, setCopiedField] = useState<string | null>(null);
 
   // Handle form input changes
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  //   const handleChange = (
+  //     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  //   ) => {
+  //     const { name, value } = e.target;
+  //     setFormData((prev) => ({ ...prev, [name]: value }));
+  //   };
 
   // Handle form submission
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  //   const handleSubmit = async (e: React.FormEvent) => {
+  //     e.preventDefault();
+  //     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+  //     // Simulate form submission
+  //     await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-    setIsSubmitting(false);
-  };
+  //     // Reset form
+  //     setFormData({
+  //       name: "",
+  //       email: "",
+  //       subject: "",
+  //       message: "",
+  //     });
+  //     setIsSubmitting(false);
+  //   };
 
   // Handle copying to clipboard
-  const handleCopy = (text: string, field: string) => {
-    navigator.clipboard.writeText(text);
-    setCopiedField(field);
+  //   const handleCopy = (text: string, field: string) => {
+  //     navigator.clipboard.writeText(text);
+  //     setCopiedField(field);
 
-    // Reset copied state after 2 seconds
-    setTimeout(() => {
-      setCopiedField(null);
-    }, 2000);
-  };
+  //     // Reset copied state after 2 seconds
+  //     setTimeout(() => {
+  //       setCopiedField(null);
+  //     }, 2000);
+  //   };
 
   return (
     <div className="space-y-12 md:space-y-16 pb-12">
@@ -257,7 +257,7 @@ export default function ContactPage() {
                       <Input
                         id="name"
                         name="name"
-                        placeholder="Your name"
+                        placeholder="Zyron Ho"
                         value={formData.name}
                         onChange={handleChange}
                         required
@@ -460,15 +460,19 @@ export default function ContactPage() {
               possibilities, I&apos;m here to help.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
-                Schedule a Call <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                variant="outline"
-                className="border-primary/20 bg-primary/5 hover:bg-primary/10"
-              >
-                View My Work
-              </Button>
+              <Link href="/coming-soon">
+                <Button className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
+                  Schedule a Call <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/coming-soon">
+                <Button
+                  variant="outline"
+                  className="border-primary/20 bg-primary/5 hover:bg-primary/10"
+                >
+                  View My Work
+                </Button>
+              </Link>
             </div>
           </div>
         </ScrollReveal>

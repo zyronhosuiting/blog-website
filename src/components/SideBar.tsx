@@ -13,7 +13,7 @@ import {
   Mail,
   Github,
   Linkedin,
-  Twitter,
+  // Twitter,
   Menu,
   X,
 } from "lucide-react";
@@ -31,6 +31,7 @@ import {
 import Image from "next/image";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "./ui/sheet";
 import RightPanel from "./RightPanel";
+import { FaXTwitter } from "react-icons/fa6";
 
 const navItems = [
   { name: "Home", href: "/", icon: Home },
@@ -42,13 +43,17 @@ const navItems = [
 ];
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com/yourusername", icon: Github },
+  { name: "GitHub", href: "https://github.com/zyronhosuiting", icon: Github },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://linkedin.com/in/sui-ting-ho-761267211/",
     icon: Linkedin,
   },
-  { name: "Twitter", href: "https://twitter.com/yourusername", icon: Twitter },
+  {
+    name: "Twitter",
+    href: "https://x.com/zyron1oT",
+    icon: FaXTwitter,
+  },
 ];
 
 export default function SideBar() {
