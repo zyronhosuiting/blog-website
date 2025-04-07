@@ -58,9 +58,16 @@ const socialLinks = [
 
 export default function SideBar() {
   const pathname = usePathname();
-  const [activePath, setActivePath] = useState(pathname);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [statsOpen, setStatsOpen] = useState(false);
+
+  // Helper function to check if a nav item is active
+  const isNavItemActive = (href: string): boolean => {
+    // Exact match for home page
+    if (href === "/" && pathname === "/") return true;
+    // For other pages, check if the pathname starts with the href (for nested routes)
+    return href !== "/" && pathname.startsWith(href);
+  };
 
   // Close mobile menu when clicking outside
   const handleClickOutside = (e: React.MouseEvent) => {
@@ -123,17 +130,16 @@ export default function SideBar() {
                   <Link
                     href={item.href}
                     onClick={() => {
-                      setActivePath(item.href);
                       setMobileMenuOpen(false); // Close mobile menu when clicking a link
                     }}
                   >
                     <SidebarMenuButton
-                      isActive={activePath === item.href}
+                      isActive={isNavItemActive(item.href)}
                       className="relative group"
                     >
                       <item.icon className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                       <span>{item.name}</span>
-                      {activePath === item.href && (
+                      {isNavItemActive(item.href) && (
                         <motion.div
                           layoutId="sidebar-indicator"
                           className="absolute left-0 top-0 w-1 h-full bg-primary rounded-r-md"
@@ -263,12 +269,11 @@ export default function SideBar() {
                     <Link
                       href={item.href}
                       onClick={() => {
-                        setActivePath(item.href);
                         setMobileMenuOpen(false);
                       }}
                       className={cn(
                         "flex items-center px-3 py-2 rounded-md text-sm",
-                        activePath === item.href
+                        isNavItemActive(item.href)
                           ? "bg-primary/10 text-primary font-medium"
                           : "text-foreground hover:bg-accent"
                       )}

@@ -18,6 +18,7 @@ import { RevealCard } from "@/components/ui/reveal-card";
 import { Timeline } from "@/components/ui/timeline";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import Link from "next/link";
 
 // Dynamically import components that use browser APIs with no SSR
 const DynamicParticleBackground = dynamic(
@@ -512,20 +513,24 @@ export default function AboutPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap gap-2 md:gap-3"
           >
-            <Button
-              size="sm"
-              className="text-xs md:text-sm bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
-            >
-              Download Resume{" "}
-              <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              className="text-xs md:text-sm border-primary/20 bg-primary/5 hover:bg-primary/10"
-            >
-              Contact Me
-            </Button>
+            <Link href="/coming-soon">
+              <Button
+                size="sm"
+                className="text-xs md:text-sm bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
+              >
+                Download Resume{" "}
+                <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button
+                size="sm"
+                variant="outline"
+                className="text-xs md:text-sm border-primary/20 bg-primary/5 hover:bg-primary/10"
+              >
+                Contact Me
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
