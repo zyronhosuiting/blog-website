@@ -160,19 +160,19 @@ export default function ArticlePage() {
   };
 
   return (
-    <div className="space-y-12 md:space-y-16">
+    <div className="space-y-12 md:space-y-16 pb-12">
       {/* Particle Background */}
       <DynamicParticleBackground />
 
       {/* Hero Section */}
-      <section className="relative">
+      <section className="relative z-10 py-6">
         {/* Background grid pattern */}
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
         {/* Glowing orb effect */}
         <div className="absolute -top-24 -right-24 w-48 h-48 md:w-96 md:h-96 bg-primary/20 rounded-full blur-3xl opacity-20"></div>
 
-        <div className="relative space-y-4 md:space-y-6">
+        <div className="relative space-y-4 md:space-y-6 container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -355,7 +355,7 @@ export default function ArticlePage() {
         </ScrollReveal>
 
         {/* Article Posts Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {filteredPosts.map((post, index) => (
             <ScrollReveal key={post.id} width="100%" delay={index * 0.05}>
               <RevealCard color="#0f1729" radius={400} className="h-full">
