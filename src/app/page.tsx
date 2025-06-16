@@ -25,11 +25,11 @@ const DynamicParticleBackground = dynamic(
 
 const featuredProjects = [
   {
-    title: "Cryptopie",
+    title: "Cryptopai",
     description:
       "A crypto media platform delivering real-time news and insights",
     tags: ["React", "Tailwind CSS", "Python"],
-    demo: "https://www.cryptopie.ai/",
+    demo: "https://www.cryptopai.io/",
     stars: 42,
     status: "In Progress",
     date: "April 2025",
