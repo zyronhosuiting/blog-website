@@ -25,13 +25,40 @@ const DynamicParticleBackground = dynamic(
 
 const featuredProjects = [
   {
+    title: "FindPets",
+    description: "A community-driven geospatial ecosystem for pet recovery",
+    tags: ["Tailwind CSS", "React", "Nodejs", "PostgreSQL"],
+    demo: "https://www.findpets.app/",
+    stars: 102,
+    status: "Completed",
+    date: "Jan 2026",
+  },
+  {
+    title: "Silkflow",
+    description: "Quantitative trading strategies and prediction market bots",
+    tags: ["Python", "CICD", "Nodejs", "Socket", "Web3"],
+    demo: "https://www.silkflow.ai/",
+    stars: 5,
+    status: "In Progress",
+    date: "June 2025",
+  },
+  {
+    title: "Odin Market",
+    description: "A decentralized asset management platform",
+    tags: ["Web3", "Python", "CICD", "Nodejs", "Socket"],
+    demo: "https://www.odin-market.com/",
+    stars: 14,
+    status: "Completed",
+    date: "October 2025",
+  },
+  {
     title: "Cryptopai",
     description:
       "A crypto media platform delivering real-time news and insights",
     tags: ["React", "Tailwind CSS", "Python"],
     demo: "https://www.cryptopai.io/",
     stars: 42,
-    status: "In Progress",
+    status: "Completed",
     date: "April 2025",
   },
   {

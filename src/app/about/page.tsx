@@ -130,7 +130,112 @@ const experience = [
 
 const timelineData = [
   {
+    title: "Present",
+    content: (
+      <div className="bg-card/30 backdrop-blur-sm border border-border/40 rounded-xl p-6">
+        <div className="flex flex-col space-y-6">
+          <div>
+            <h3 className="text-lg font-semibold text-foreground mb-2">
+              Hobbyist Coder
+            </h3>
+            <p className="text-muted-foreground text-sm mb-4">
+              Architecting and deploying a community-driven geospatial ecosystem
+              for pet recovery, utilizing real-time data visualization to bridge
+              information gaps in urban environments.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {["Tailwind CSS", "React", "Nodejs", "PostgreSQL"].map((tech) => (
+                <Badge
+                  key={tech}
+                  variant="outline"
+                  className="text-xs bg-primary/5 border-primary/20"
+                >
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative w-full h-40 rounded-md overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5">
+            <Image
+              src="/project/findpet.png"
+              alt="findpet"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
     title: "Present - 2025",
+    content: (
+      <div className="bg-card/30 backdrop-blur-sm border border-border/40 rounded-xl p-6">
+        <div className="flex flex-col space-y-6">
+          <div>
+            <h3 className="text-lg font-semibold text-foreground mb-2">
+              Application Architect at Silkflow
+            </h3>
+            <p className="text-muted-foreground text-sm mb-4">
+              Architecting and deploying automated quantitative trading
+              strategies and prediction market bots utilizing Python to
+              capitalize on market inefficiencies. Engineering a comprehensive
+              internal asset management ecosystem to aggregate real-time data
+              from centralized exchanges and decentralized protocols like
+              Jupiter. Overseeing critical liquidity and risk indicators,
+              including TVL and funding rates, to drive data-informed investment
+              decisions for a private family office.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {["Python", "CICD", "Nodejs", "Socket", "Web3"].map((tech) => (
+                <Badge
+                  key={tech}
+                  variant="outline"
+                  className="text-xs bg-primary/5 border-primary/20"
+                >
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-2 mb-4">
+            <Image
+              src="/project/silkflow.png"
+              alt="silkflow"
+              width={500}
+              height={500}
+              className="object-cover"
+            />
+            <Image
+              src="/project/odin-market.png"
+              alt="odin-market"
+              width={500}
+              height={500}
+              className="object-cover"
+            />
+            <Image
+              src="/project/crack3.png"
+              alt="crack3"
+              width={500}
+              height={500}
+              className="object-cover"
+            />
+            <Image
+              src="/project/crypto-price-prediction.png"
+              alt="crypto-price-prediction"
+              width={500}
+              height={500}
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "2025",
     content: (
       <div className="bg-card/30 backdrop-blur-sm border border-border/40 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-foreground mb-2">
